@@ -4,8 +4,15 @@
 </head>
 <body>
  <h1>Check list:</h1>
-<#list myStringsList as myString>
-    ${myString}
+<#list myStringsList>
+   <p>list items in myStringsList</p>
+   <ul>
+   <#items as myString>
+    <li>++++ ${myString}<#sep>,</#sep> ++++ </li>
+   </#items>
+   </ul>
+<#else>
+   <p>list is empty!!!</p>
 </#list>
 </body>
 </html>
