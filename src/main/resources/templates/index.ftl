@@ -37,6 +37,24 @@
     </#items>
  </ul>
  </#list>
-
+<h1> check assignment operators</h1>
+ <#assign testNumber=100>
+ ${testNumber}
+ <#assign testNumber++>
+ ${testNumber}
+ <#assign testNumber-->
+ ${testNumber}
+ <#assign testNumber+=3>
+ ${testNumber}
+ <#assign testNumber-=3>
+ ${testNumber}
+ <#assign testNumber*=3>
+ ${testNumber}
+ <#assign testNumber/=3>
+ ${testNumber}
+ <#assign testNumber*=3>
+ ${testNumber}
+ <#assign testNumber%=3>
+ ${testNumber}
 </body>
 </html>
