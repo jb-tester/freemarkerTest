@@ -8,7 +8,15 @@
    <p>list items in myStringsList</p>
    <ul>
    <#items as myString>
-    <li>++++ ${myString}<#sep>,</#sep> ++++ </li>
+    <li>++++ ${myString} ++++ </li>
+    <#list myStrList>
+        <ul>
+        <#items as myStr>
+            <li>${myStr}<#sep>,</#sep></li>
+        </#items>
+        </ul>
+        <#else>
+    </#list>
    </#items>
    </ul>
 <#else>

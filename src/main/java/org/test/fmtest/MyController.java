@@ -26,8 +26,13 @@ public class MyController {
         myStringsList.add("item2");
         myStringsList.add("item3");
         myStringsList.add("item4");
-
+        List<String> myStrList = new ArrayList<>();
+        myStrList.add("item1");
+        myStrList.add("item2");
+        myStrList.add("item3");
+        myStrList.add("item4");
         model.addAttribute("myStringsList",myStringsList);
+        model.addAttribute("myStrList",myStrList);
         return "index";
     }
 
