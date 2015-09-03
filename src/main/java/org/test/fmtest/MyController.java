@@ -1,9 +1,14 @@
 package org.test.fmtest;
 
+import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * *******************************
@@ -12,13 +17,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * *******************************
  */
 @Controller
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 public class MyController {
     @RequestMapping("/")
-    public String foo(){
+    public String foo(ModelMap model){
+        List<String> myStringsList = new ArrayList<>();
+        myStringsList.add("item1");
+        myStringsList.add("item2");
+        myStringsList.add("item3");
+        myStringsList.add("item4");
+
+        model.addAttribute("myStringsList",myStringsList);
         return "index";
     }
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(MyController.class, args);
-    }
+
 }
