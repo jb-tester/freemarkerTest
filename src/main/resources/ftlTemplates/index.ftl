@@ -79,7 +79,7 @@ ${"foo.bar.txt"?keep_before_last(".")}
     <li>${numItem}: ?floor=${numItem?floor}, ?ceiling=${numItem?ceiling}, ?round=${numItem?round}</li>
 </#list>
 </ul>
-<#assign testNumList=[2.75, 3.15, 0.0]>
+<#assign testNumList=[2.75, 3.15, 0]>
 ${testNumList[0]?floor}
 ${testNumList[1]?ceiling}
 ${testNumList[2]?round}
